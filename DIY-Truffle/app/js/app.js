@@ -9,8 +9,7 @@ function app() {
     var contractDataPromise = $.getJSON('DIY.json');
     var networkIdPromise = web3.eth.net.getId(); // resolves on the current network id
 	var accountsPromise = web3.eth.getAccounts(); // resolves on an array of accounts
-	// var prices = {}
-  
+
     Promise.all([contractDataPromise, networkIdPromise, accountsPromise])
       .then(function initApp(results) {
         var contractData = results[0];
@@ -73,6 +72,98 @@ function app() {
 		var amount = $("#amount").val();
 		mint(amount);
 	});
+
+	var next = 1;
+    $("#b1").click(function(e){
+		e.preventDefault();
+		var addSel = '#selectToken' + next;
+		var addto = "#field" + next;
+		var addRemove = "#field" + (next);
+		next = next + 1;
+		var selButton = '<select id="selectToken' + next + '"></select>';
+		var selectButton = $(selButton);
+        var newIn = '<input autocomplete="off" class="input form-control" placeholder="Enter a numerical percentage" id="field' + next + '" name="field' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+		var removeButton = $(removeBtn);
+
+		$(addto).after(newInput);
+		$(addto).after(selectButton);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+				var fieldID = "#field" + fieldNum;
+				var selectID =  '#selectToken' + fieldNum;
+                $(this).remove();
+				$(fieldID).remove();
+				$(selectID).remove();
+			});
+
+		getTokens(selectButton[0]);
+	});
+
+	var select = document.getElementById("selectToken1"); 
+
+	function getTokens(select){
+
+		var options = [];
+		let request = new XMLHttpRequest();
+		let url = 'https://api.coinmarketcap.com/v2/ticker/?limit=10';
+
+		request.onreadystatechange = function() {
+		  if (this.readyState === 4 && this.status === 200) {
+			let response = JSON.parse(this.responseText);
+			for (var id in response.data){
+				options.push(response.data[id].name);
+			}
+			for (let i = 0; i < options.length; i++){
+				var opt = options[i]
+				var el = document.createElement("option");
+				el.textContent = opt;
+				el.value = opt;
+				select.appendChild(el);
+			}
+		  }
+		}
+	
+		request.open("GET", url, true);
+		request.send();
+
+	}
+
+	getTokens(select);
+
+	var form = document.getElementsByClassName("input-append").item(0);
+	form.addEventListener('submit', function(e){
+		e.preventDefault();
+		var percentSum = 0;
+		var answer = {}
+		answer["tokens"] = []
+		for (let i = 1; i <= next; i++) {
+			var addSel = 'selectToken' + i;
+			var addto = "field" + i;
+
+			var token = document.getElementById(addSel).value
+			var percentage = document.getElementById(addto).value
+			percentSum += Number(percentage)
+			answer["tokens"].push({"token": token, "percentage" : percentage})
+		}
+
+		answer["rebalance"] = document.getElementById("rebalance").value
+
+		if ( percentSum > 100){
+			document.getElementById("total").value = "Err"
+		} else {
+			document.getElementById("total").value = percentSum;
+		}
+
+		console.log(answer)
+	});
+
 
 
 }
