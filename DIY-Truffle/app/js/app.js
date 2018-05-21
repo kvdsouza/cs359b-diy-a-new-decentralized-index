@@ -112,7 +112,7 @@ function app() {
 
 		var options = [];
 		let request = new XMLHttpRequest();
-		let url = 'https://api.coinmarketcap.com/v2/ticker/?limit=10';
+		let url = 'https://api.coinmarketcap.com/v2/ticker/?limit=20';
 
 		request.onreadystatechange = function() {
 		  if (this.readyState === 4 && this.status === 200) {
