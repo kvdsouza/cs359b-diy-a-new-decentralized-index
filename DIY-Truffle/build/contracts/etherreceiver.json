@@ -1,111 +1,17 @@
 {
-  "contractName": "DIY",
+  "contractName": "etherreceiver",
   "abi": [
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "balances",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
     {
       "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "constructor"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "deposit",
-      "outputs": [
-        {
-          "name": "success",
-          "type": "bool"
-        }
-      ],
-      "payable": true,
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "value",
-          "type": "uint256"
-        }
-      ],
-      "name": "withdraw",
-      "outputs": [
-        {
-          "name": "success",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "name": "value",
-          "type": "uint256"
-        }
-      ],
-      "name": "transfer",
-      "outputs": [
-        {
-          "name": "success",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "_owner",
-          "type": "address"
-        }
-      ],
-      "name": "ethBalanceOf",
-      "outputs": [
-        {
-          "name": "balance",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b503373ffffffffffffffffffffffffffffffffffffffff16316000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610479806100bb6000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806327e235e3146100725780632e1a7d4d146100c95780637252bbf21461010e578063a9059cbb14610165578063d0e30db0146101ca575b600080fd5b34801561007e57600080fd5b506100b3600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101ec565b6040518082815260200191505060405180910390f35b3480156100d557600080fd5b506100f460048036038101908080359060200190929190505050610204565b604051808215151515815260200191505060405180910390f35b34801561011a57600080fd5b5061014f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102ed565b6040518082815260200191505060405180910390f35b34801561017157600080fd5b506101b0600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061030e565b604051808215151515815260200191505060405180910390f35b6101d26103f8565b604051808215151515815260200191505060405180910390f35b60006020528060005260406000206000915090505481565b6000816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101561025157600080fd5b816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f193505050501580156102e3573d6000803e3d6000fd5b5060019050919050565b60008173ffffffffffffffffffffffffffffffffffffffff16319050919050565b6000816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101561035b57600080fd5b816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055508273ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f193505050501580156103ed573d6000803e3d6000fd5b506001905092915050565b6000346000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555060019050905600a165627a7a7230582064aa9bbecbfff2df6905038ac05d20b1edc18e5274b5d154f2e968668be6b5e90029",
-  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806327e235e3146100725780632e1a7d4d146100c95780637252bbf21461010e578063a9059cbb14610165578063d0e30db0146101ca575b600080fd5b34801561007e57600080fd5b506100b3600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101ec565b6040518082815260200191505060405180910390f35b3480156100d557600080fd5b506100f460048036038101908080359060200190929190505050610204565b604051808215151515815260200191505060405180910390f35b34801561011a57600080fd5b5061014f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102ed565b6040518082815260200191505060405180910390f35b34801561017157600080fd5b506101b0600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061030e565b604051808215151515815260200191505060405180910390f35b6101d26103f8565b604051808215151515815260200191505060405180910390f35b60006020528060005260406000206000915090505481565b6000816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101561025157600080fd5b816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f193505050501580156102e3573d6000803e3d6000fd5b5060019050919050565b60008173ffffffffffffffffffffffffffffffffffffffff16319050919050565b6000816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101561035b57600080fd5b816000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055508273ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f193505050501580156103ed573d6000803e3d6000fd5b506001905092915050565b6000346000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555060019050905600a165627a7a7230582064aa9bbecbfff2df6905038ac05d20b1edc18e5274b5d154f2e968668be6b5e90029",
-  "sourceMap": "117:2877:0:-;;;358:162;8:9:-1;5:2;;;30:1;27;20:12;5:2;358:162:0;413:10;:18;;;390:8;:20;399:10;390:20;;;;;;;;;;;;;;;:41;;;;503:10;493:7;;:20;;;;;;;;;;;;;;;;;;117:2877;;;;;;",
-  "deployedSourceMap": "117:2877:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;136:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;136:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;655:203;;8:9:-1;5:2;;;30:1;27;20:12;5:2;655:203:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1077:114;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1077:114:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;864:207;;8:9:-1;5:2;;;30:1;27;20:12;5:2;864:207:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;526:119;;;;;;;;;;;;;;;;;;;;;;;;;;;136:44;;;;;;;;;;;;;;;;;:::o;655:203::-;693:12;743:5;720:8;:20;729:10;720:20;;;;;;;;;;;;;;;;:28;717:38;;;750:5;;;717:38;789:5;765:8;:20;774:10;765:20;;;;;;;;;;;;;;;;:29;;;;;;;;;;;804:10;:19;;:26;824:5;804:26;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;804:26:0;847:4;840:11;;655:203;;;:::o;1077:114::-;1136:15;1170:6;:14;;;1163:21;;1077:114;;;:::o;864:207::-;914:12;964:5;941:8;:20;950:10;941:20;;;;;;;;;;;;;;;;:28;938:38;;;971:5;;;938:38;1010:5;986:8;:20;995:10;986:20;;;;;;;;;;;;;;;;:29;;;;;;;;;;;1025:2;:11;;:18;1037:5;1025:18;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1025:18:0;1060:4;1053:11;;864:207;;;;:::o;526:119::-;561:12;608:9;584:8;:20;593:10;584:20;;;;;;;;;;;;;;;;:33;;;;;;;;;;;634:4;627:11;;526:119;:::o",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820a93f4ea66ffb2cf23dc634ef1e24829f27bd1b52ea0412b319c6e8af4461b2a20029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820a93f4ea66ffb2cf23dc634ef1e24829f27bd1b52ea0412b319c6e8af4461b2a20029",
+  "sourceMap": "26:89:0:-;;;61:48;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:48:0;26:89;;;;;;",
+  "deployedSourceMap": "26:89:0:-;;;;;",
   "source": "pragma solidity ^0.4.21;\n\ncontract etherreceiver{       \n    function etherreceiver() public{          \n    }    \n}\n\ncontract DIY {\n    mapping (address => uint256) public balances;\n\n    // event BalanceChanged(address indexed _address, uint256 _balance);\n    address creator;\n\n    // mapping (address => mapping (address => uint256)) public allowance;\n\n    function DIY() public {\n        balances[msg.sender] = msg.sender.balance;        // Give the creator initially all the tokens\n        creator = msg.sender;\n    }\n\n    function deposit() payable returns(bool success){\n        balances[msg.sender] += msg.value;\n        return true;\n    }\n    \n    function withdraw(uint value) returns(bool success) {\n        if(balances[msg.sender] < value) throw;\n        balances[msg.sender] -= value;\n        msg.sender.transfer(value);\n        return true;\n    }\n\n    function transfer(address to, uint value) returns(bool success) {\n        if(balances[msg.sender] < value) throw;\n        balances[msg.sender] -= value;\n        to.transfer(value);\n        return true;\n    }\n\n    function ethBalanceOf(address _owner) public view returns (uint256 balance) {\n        return _owner.balance;\n    }\n\n\n    // function withdraw(address _receiver) public returns (bool) {\n    //     msg.sender.transfer(msg.value);\n    //     emit BalanceChanged(creator, creator.balance);\n    //     emit BalanceChanged(_receiver, _receiver.balance);\n    //     return true;\n    // }\n\n    // function() public payable {\n    //     emit BalanceChanged(creator, creator.balance);\n    //     approve(creator, msg.value);\n    // }\n\n\n\n \n    // function withdraw(address _destination, uint256 _value) public returns (bool) {\n    //     require(msg.sender == creator);\n        // if (_destination.balance >= _value){\n        //     _destination.transfer(_value);\n        //     return true;\n        // }\n        // return false;\n\n        // if(!etherreceiver.send(_value)){\n        //    return false;\n        // }   \n    //     return true; \n    // }\n    \n\n    // function approve(address _spender, uint256 _value) public\n    //     returns (bool success) {\n    //     allowance[msg.sender][_spender] = _value;\n    //     return true;\n    // }\n\n    // function transfer(address _to, uint256 _value) public returns (bool success) {\n    //     require(balances[msg.sender] >= _value);\n    //     balances[msg.sender] -= _value;\n    //     balances[_to] += _value;\n    //     emit BalanceChanged(msg.sender, balances[msg.sender]);\n    //     emit BalanceChanged(_to, balances[_to]);\n    // return true;\n    // }\n\n    // function balanceOf(address _owner) public view returns (uint256 balance) {\n    //     return balances[_owner];\n    // }\n\n    // function mint(uint256 _amount) public returns (bool success) {\n    //     require(msg.sender == creator);\n    //     totalSupply += _amount;\n    //     balances[msg.sender] += _amount;\n    //     emit BalanceChanged(msg.sender, balances[msg.sender]);\n    // return true;\n    // }\n}",
   "sourcePath": "/Users/JeffreyYu/Desktop/truffleProj/cs359b-diy-a-new-decentralized-index/DIY-Truffle/contracts/DIY.sol",
   "ast": {
@@ -3078,20 +2984,7 @@
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {
-    "4447": {
-      "events": {},
-      "links": {},
-      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10",
-      "transactionHash": "0x68e15787daf34efd5575415adaad3ab1598ac882dd2307ba0e154b8d44673ee8"
-    },
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0xab3661d93ccec481cb3eb354eb1608bc63738be4",
-      "transactionHash": "0x0ed6029101f6d0714fbb0972ce81c7a0176af921c67d426777f13914637b1d96"
-    }
-  },
+  "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-29T09:47:48.841Z"
+  "updatedAt": "2018-05-29T09:47:47.626Z"
 }
